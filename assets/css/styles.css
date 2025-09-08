@@ -1,0 +1,53 @@
+/* ASTECH IT SOLUTION — minimal, modern styles */
+:root{
+  --bg:#0b0f17;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#60a5fa;
+  --accent-2:#34d399;
+  --border:#1f2937;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+img{display:inline-block}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text)}
+nav a{margin:0 8px;color:var(--text)}
+nav .btn.small{padding:8px 12px;font-size:14px}
+
+.hero{padding-top:40px;padding-bottom:20px}
+.hero h1{font-size:40px;line-height:1.1;margin:0 0 12px}
+.hero p{color:var(--muted);margin:0 0 16px}
+.accent{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta{display:flex;gap:12px;margin:16px 0 8px}
+
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--accent);color:#0b0f17;font-weight:700;border:1px solid transparent;transition:transform .05s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.outline{background:transparent;border-color:var(--border);color:var(--text)}
+
+.stats{display:flex;gap:16px;flex-wrap:wrap;padding:0;margin:10px 0 0;list-style:none}
+.stats li{background:var(--card);border:1px solid var(--border);padding:10px 12px;border-radius:10px}
+
+h2{margin-top:40px}
+.grid{display:grid;gap:16px;margin-top:12px}
+.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.grid.two,.grid.three{grid-template-columns:1fr} .hero h1{font-size:32px}}
+
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+.list{padding-left:18px;margin:8px 0}
+.list li{margin:8px 0}
+
+.contact .form{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.contact .form .full{grid-column:1/-1}
+label{display:flex;flex-direction:column;gap:6px;font-weight:600}
+input,textarea{background:#0f172a;border:1px solid var(--border);border-radius:10px;padding:12px;color:var(--text)}
+.footer{display:flex;align-items:center;justify-content:space-between;margin-top:40px;border-top:1px solid var(--border);padding-top:16px}
+.note{color:var(--muted);}
+
+footer a{color:var(--muted)}
