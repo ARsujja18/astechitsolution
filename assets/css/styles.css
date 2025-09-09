@@ -320,5 +320,18 @@ footer a {
   p {
     font-size: 1rem;
   }
+
+  .card .icon {
+  margin-bottom: 12px;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card svg {
+  flex-shrink: 0;
+}
+
 }
 
