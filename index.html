@@ -21,15 +21,55 @@
       flex-shrink: 0;
       color: #007bff; /* Blue tick */
     }
+
+    /* --- Mobile Menu --- */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 28px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #111827;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+      nav a {
+        padding: 12px;
+        color: #fff;
+        text-decoration: none;
+        display: block;
+      }
+      nav a:hover {
+        background: #1f2937;
+        border-radius: 6px;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
   <!-- Header -->
-  <header class="container header">
-    <a class="brand" href="index.html">
+  <header class="container header" style="display:flex; justify-content:space-between; align-items:center; position:relative;">
+    <a class="brand" href="index.html" style="display:flex; align-items:center; gap:8px; color:#fff; text-decoration:none;">
       <img alt="ASTECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
       <span>ASTECH IT SOLUTION</span>
     </a>
+    <!-- Mobile menu button -->
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
     <nav>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
@@ -190,7 +230,6 @@
       <p class="note">Or email us directly: <a href="mailto:astech1811@gmail.com">astech1811@gmail.com</a></p>
     </section>
   </main>
-  </main>
 
   <!-- Footer -->
   <footer class="container footer">
@@ -198,6 +237,15 @@
     <a href="services.html">Services</a>
   </footer>
 
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
