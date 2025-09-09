@@ -257,23 +257,74 @@
     </section>
 
     <!-- Recent Work -->
-    <section id="work" class="container">
-      <h2>Recent Work</h2>
-      <div class="grid three">
-        <div class="card">
-          <h3>Project Titan</h3>
-          <p>Marketing site + lead capture with blazing load times.</p>
-        </div>
-        <div class="card">
-          <h3>Atlas CRM</h3>
-          <p>Custom mini-CRM that automated follow-ups and reports.</p>
-        </div>
-        <div class="card">
-          <h3>Nova Shop</h3>
-          <p>Lightweight eCommerce with smooth checkout.</p>
-        </div>
+   <!-- Recent Work (Auto-Sliding Carousel) -->
+<section id="work" class="container">
+  <h2>Recent Work</h2>
+  <div class="work-slider">
+    <div class="work-track">
+      <div class="work-card" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+        <h3>Project Titan</h3>
+        <p>Marketing site + lead capture with blazing load times.</p>
       </div>
-    </section>
+      <div class="work-card" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
+        <h3>Atlas CRM</h3>
+        <p>Custom mini-CRM that automated follow-ups and reports.</p>
+      </div>
+      <div class="work-card" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+        <h3>Nova Shop</h3>
+        <p>Lightweight eCommerce with smooth checkout.</p>
+      </div>
+      <!-- duplicate for infinite effect -->
+      <div class="work-card" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
+        <h3>Project Titan</h3>
+        <p>Marketing site + lead capture with blazing load times.</p>
+      </div>
+      <div class="work-card" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
+        <h3>Atlas CRM</h3>
+        <p>Custom mini-CRM that automated follow-ups and reports.</p>
+      </div>
+      <div class="work-card" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
+        <h3>Nova Shop</h3>
+        <p>Lightweight eCommerce with smooth checkout.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* --- Recent Work Carousel --- */
+.work-slider {
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+.work-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollWork 25s linear infinite;
+  width: max-content;
+}
+
+.work-card {
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 16px;
+  color: #fff;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+@keyframes scrollWork {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } /* adjust based on duplicate cards */
+}
+</style>
 
     <!-- Contact -->
     <section id="contact" class="container contact">
