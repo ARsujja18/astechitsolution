@@ -153,7 +153,7 @@ h2 {
 }
 
 .grid.three {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Default desktop */
 }
 
 /* Card */
@@ -225,17 +225,15 @@ footer a {
 /* =======================
    Responsive adjustments
    ======================= */
-@media (max-width: 900px) {
-  .grid.two,
-  .grid.three {
-    grid-template-columns: 1fr;
-  }
 
-  .hero h1 {
-    font-size: 32px;
+/* Tablet / mobile desktop-view → 2 columns */
+@media (max-width: 1024px) {
+  .grid.three {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Small mobile → 1 column */
 @media (max-width: 768px) {
   body {
     padding: 10px;
@@ -294,7 +292,7 @@ footer a {
   }
 
   .grid.three {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Force 1 card */
     gap: 15px;
   }
 
@@ -323,3 +321,4 @@ footer a {
     font-size: 1rem;
   }
 }
+
