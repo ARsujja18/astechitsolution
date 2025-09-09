@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/img/mylogo.png">
   <link rel="stylesheet" href="assets/css/styles.css">
 
- <style>
+<style>
   /* --- Header Fix for Services page --- */
   header {
     display: flex;
@@ -72,11 +72,18 @@
   /* --- Service Grid Layout --- */
   .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 columns */
     gap: 20px;
   }
 
-  /* --- Mobile Responsive --- */
+  /* --- Tablet / Small Laptop --- */
+  @media (max-width: 1199px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+  }
+
+  /* --- Mobile --- */
   @media (max-width: 768px) {
     nav {
       display: none;
@@ -106,12 +113,13 @@
       display: block;
     }
 
-    /* Keep services grid in 2 columns even on mobile */
+    /* Small mobile → 1 column */
     .services-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
     }
   }
 </style>
+
 
 </head>
 <body>
