@@ -21,6 +21,42 @@
       flex-shrink: 0;
       color: #007bff; /* Blue tick */
     }
+
+    /* Mobile Menu Styles */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    .menu-toggle svg {
+      width: 28px;
+      height: 28px;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
@@ -30,6 +66,12 @@
       <img alt="ASTECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
       <span>ASTECH IT SOLUTION</span>
     </a>
+    <button class="menu-toggle" aria-label="Toggle Menu">
+      <!-- Hamburger Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
     <nav>
       <a href="#services">Services</a>
       <a href="#work">Work</a>
@@ -70,7 +112,7 @@
       </ul>
     </section>
 
-   <!-- Core Services -->
+    <!-- Core Services -->
     <section id="services" class="container">
       <h2>Core Services</h2>
       <div class="grid three">
@@ -199,5 +241,13 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    // Toggle mobile menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
