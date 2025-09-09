@@ -92,41 +92,47 @@
     }
 
     /* --- Mobile Responsive --- */
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #0f172a;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        border-radius: 0 0 12px 12px;
-      
-        max-height: 0;
+  @media (max-width: 768px) {
+  nav {
+    display: flex;              /* always flex (so toggle works) */
+    flex-direction: column;
+    background: #0f172a;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border-radius: 0 0 12px 12px;
+
+    max-height: 0;             /* hidden by default */
     opacity: 0;
-    
-   
+    overflow: hidden;
+    pointer-events: none;       /* so links are not clickable */
     transition: max-height 0.4s ease, opacity 0.4s ease;
-      }
-      nav.active {
-        display: flex;
-        max-height: 500px;
-      }
-      nav a {
-        padding: 14px;
-        display: block;
-      }
-      nav .btn.small {
-        margin-top: 0px;
-        display: inline-block;
-      }
-      .menu-toggle {
-        display: block;
-      }
-    }
+  }
+
+  nav.active {
+    max-height: 500px;          /* enough space for links */
+    opacity: 1;
+    pointer-events: auto;       /* enable clicking */
+  }
+
+  nav a {
+    padding: 14px;
+    display: block;
+  }
+
+  nav .btn.small {
+    margin-top: 0px;
+    display: inline-block;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
   </style>
 </head>
 <body>
