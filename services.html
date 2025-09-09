@@ -8,88 +8,111 @@
   <link rel="icon" href="assets/img/mylogo.png">
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <style>
-    /* --- Header Fix for Services page --- */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      background: #0f172a;
-      position: relative;
-      z-index: 1000;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .brand img {
-      width: 56px;
-      height: 56px;
-    }
+ <style>
+  /* --- Header Fix for Services page --- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background: #0f172a;
+    position: relative;
+    z-index: 1000;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .brand img {
+    width: 56px;
+    height: 56px;
+  }
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  nav a:hover {
+    color: #3b82f6;
+  }
+
+  /* --- Mobile Menu Button --- */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 28px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* --- Service Card Headings --- */
+  .card h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 12px 0;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* --- Service Grid Layout --- */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Always 2 columns */
+    gap: 20px;
+  }
+
+  /* --- Mobile Responsive --- */
+  @media (max-width: 768px) {
     nav {
+      display: none;
+      flex-direction: column;
+      background: #0f172a;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      border-radius: 0 0 12px 12px;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+    nav.active {
       display: flex;
-      gap: 20px;
+      max-height: 500px;
+      opacity: 1;
     }
     nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
+      padding: 14px;
+      display: block;
     }
-    nav a:hover {
-      color: #3b82f6;
-    }
-
-    /* --- Mobile Menu Button --- */
     .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #fff;
-      font-size: 28px;
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
+      display: block;
     }
 
-    /* --- Mobile Responsive --- */
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #0f172a;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        border-radius: 0 0 12px 12px;
-        max-height: 0;
-        opacity: 0;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-      }
-      nav.active {
-        display: flex;
-        max-height: 500px;
-        opacity: 1;
-      }
-      nav a {
-        padding: 14px;
-        display: block;
-      }
-      .menu-toggle {
-        display: block;
-      }
+    /* Keep services grid in 2 columns even on mobile */
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
-  </style>
+  }
+</style>
+
 </head>
 <body>
   <!-- Header -->
