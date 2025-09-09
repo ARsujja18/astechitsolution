@@ -7,6 +7,89 @@
   <meta name="description" content="Services by ASTECH IT SOLUTION: Web development, custom software, eCommerce, UI/UX, and maintenance.">
   <link rel="icon" href="assets/img/mylogo.png">
   <link rel="stylesheet" href="assets/css/styles.css">
+
+  <style>
+    /* --- Header Fix for Services page --- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      background: #0f172a;
+      position: relative;
+      z-index: 1000;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .brand img {
+      width: 56px;
+      height: 56px;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #3b82f6;
+    }
+
+    /* --- Mobile Menu Button --- */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 28px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    /* --- Mobile Responsive --- */
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        background: #0f172a;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        border-radius: 0 0 12px 12px;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+      }
+      nav.active {
+        display: flex;
+        max-height: 500px;
+        opacity: 1;
+      }
+      nav a {
+        padding: 14px;
+        display: block;
+      }
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Header -->
@@ -15,10 +98,13 @@
       <img alt="ASTECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
       <span>ASTECH IT SOLUTION</span>
     </a>
+    <!-- Mobile menu button -->
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
     <nav>
       <a href="index.html#services">Services</a>
       <a href="index.html#work">Work</a>
       <a href="index.html#contact">Contact</a>
+      <a href="index.html">Home</a>
     </nav>
   </header>
 
@@ -104,6 +190,15 @@
     <a href="index.html">Home</a>
   </footer>
 
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>
