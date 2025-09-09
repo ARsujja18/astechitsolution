@@ -137,5 +137,34 @@ footer a{color:var(--muted)}
   img {
     max-width: 100%;
     height: auto;
+  } 
+
+  /* Improved responsiveness for services page */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
+
+  .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .list li {
+    margin: 8px 0;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
 }
