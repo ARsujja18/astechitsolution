@@ -257,11 +257,12 @@
     </section>
 
     <!-- Recent Work -->
-   <!-- Recent Work (Auto-Sliding Carousel) -->
+ <!-- Recent Work (Auto-Sliding Carousel) -->
 <section id="work" class="container">
   <h2>Recent Work</h2>
   <div class="work-slider">
     <div class="work-track">
+      <!-- First set of projects -->
       <div class="work-card" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
         <h3>Project Titan</h3>
         <p>Marketing site + lead capture with blazing load times.</p>
@@ -274,7 +275,20 @@
         <h3>Nova Shop</h3>
         <p>Lightweight eCommerce with smooth checkout.</p>
       </div>
-      <!-- duplicate for infinite effect -->
+      <div class="work-card" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+        <h3>EduLearn</h3>
+        <p>E-learning platform with video lessons, quizzes, and student tracking.</p>
+      </div>
+      <div class="work-card" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+        <h3>HealthTrack</h3>
+        <p>Healthcare appointment and patient records system with secure access.</p>
+      </div>
+      <div class="work-card" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
+        <h3>FinCore</h3>
+        <p>Finance dashboard for managing invoices, payments, and analytics.</p>
+      </div>
+
+      <!-- Duplicate set for infinite effect -->
       <div class="work-card" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
         <h3>Project Titan</h3>
         <p>Marketing site + lead capture with blazing load times.</p>
@@ -286,10 +300,58 @@
       <div class="work-card" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
         <h3>Nova Shop</h3>
         <p>Lightweight eCommerce with smooth checkout.</p>
+      </div>
+      <div class="work-card" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+        <h3>EduLearn</h3>
+        <p>E-learning platform with video lessons, quizzes, and student tracking.</p>
+      </div>
+      <div class="work-card" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
+        <h3>HealthTrack</h3>
+        <p>Healthcare appointment and patient records system with secure access.</p>
+      </div>
+      <div class="work-card" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
+        <h3>FinCore</h3>
+        <p>Finance dashboard for managing invoices, payments, and analytics.</p>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+/* --- Recent Work Carousel --- */
+.work-slider {
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+.work-track {
+  display: flex;
+  gap: 20px;
+  animation: scrollWork 40s linear infinite;
+  width: max-content;
+}
+
+.work-card {
+  min-width: 280px;
+  padding: 20px;
+  border-radius: 16px;
+  color: #fff;
+  flex-shrink: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+@keyframes scrollWork {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+</style>
+
 
 <style>
 /* --- Recent Work Carousel --- */
