@@ -413,23 +413,34 @@
   <!-- Replace with your actual Web3Forms Access Key -->
   <input type="hidden" name="access_key" value="dc29630e-b890-4b86-8104-f56df7bcc2c9">
 
+  <!-- Name -->
   <label>
     <span>Name</span>
     <input type="text" name="name" required minlength="2" maxlength="50" pattern="^[A-Za-z\s]+$" placeholder="Your full name ---only text allowed">
   </label>
 
+  <!-- Email -->
   <label>
     <span>Email</span>
     <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="your.email@example.com">
   </label>
 
+  <!-- Mobile Number -->
+  <label>
+    <span>Mobile Number</span>
+    <input type="tel" name="phone" required pattern="^\d{10}$" placeholder="10-digit mobile number">
+  </label>
+
+  <!-- Project Brief -->
   <label class="full">
     <span>Project Brief</span>
     <textarea name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Describe your project in detail"></textarea>
   </label>
 
+  <!-- Submit Button -->
   <button class="btn" type="submit">Send</button>
 </form>
+
 
 <!-- Success + Error Messages -->
 <div id="result"></div>
