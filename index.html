@@ -409,21 +409,53 @@
 <section id="contact" class="container contact">
   <h2>Contact</h2>
   <p>Tell us about your project. We’ll reply within 1 business day.</p>
-  <form class="form" action="mailto:astech1811@gmail.com" method="post" enctype="text/plain">
-    <label>
-      <span>Name</span>
-      <input type="text" name="name" required minlength="2" maxlength="50" pattern="^[A-Za-z\s]+$" placeholder="Your full name">
-    </label>
-    <label>
-      <span>Email</span>
-      <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="your.email@example.com">
-    </label>
-    <label class="full">
-      <span>Project Brief</span>
-      <textarea name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Describe your project in detail"></textarea>
-    </label>
-    <button class="btn" type="submit">Send</button>
-  </form>
+  <form class="form" action="https://api.web3forms.com/submit" method="POST">
+  <!-- Replace with your actual Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="dc29630e-b890-4b86-8104-f56df7bcc2c9">
+
+  <label>
+    <span>Name</span>
+    <input type="text" name="name" required minlength="2" maxlength="50" pattern="^[A-Za-z\s]+$" placeholder="Your full name">
+  </label>
+
+  <label>
+    <span>Email</span>
+    <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="your.email@example.com">
+  </label>
+
+  <label class="full">
+    <span>Project Brief</span>
+    <textarea name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Describe your project in detail"></textarea>
+  </label>
+
+  <button class="btn" type="submit">Send</button>
+</form>
+
+<!-- Success + Error Messages -->
+<div id="result"></div>
+
+<script>
+  const form = document.querySelector(".form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData
+    });
+
+    if (response.ok) {
+      result.innerHTML = "<p style='color:green;'>✅ Your message has been sent successfully!</p>";
+      form.reset();
+    } else {
+      result.innerHTML = "<p style='color:red;'>❌ Oops! Something went wrong. Please try again.</p>";
+    }
+  });
+</script>
+
   <p class="note">Or email us directly: <a href="mailto:astech1811@gmail.com">astech1811@gmail.com</a></p>
 </section>
 
