@@ -450,11 +450,23 @@
     if (response.ok) {
       result.innerHTML = "<p style='color:green;'>✅ Your message has been sent successfully!</p>";
       form.reset();
+
+      // Remove success message after 30 seconds (30000 ms)
+      setTimeout(() => {
+        result.innerHTML = "";
+      }, 30000);
+
     } else {
       result.innerHTML = "<p style='color:red;'>❌ Oops! Something went wrong. Please try again.</p>";
+
+      // Remove error message after 30 seconds
+      setTimeout(() => {
+        result.innerHTML = "";
+      }, 30000);
     }
   });
 </script>
+
 
   <p class="note">Or email us directly: <a href="mailto:astech1811@gmail.com">astech1811@gmail.com</a></p>
 </section>
