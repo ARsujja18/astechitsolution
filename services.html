@@ -122,6 +122,15 @@
       grid-template-columns: 1fr;
     }
   }
+
+/* Force 2-column grid on mobiles (even in desktop view mode) */
+@media screen and (max-device-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+  
 </style>
 
 
