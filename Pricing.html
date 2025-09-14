@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <style>
+    /* --- Body & Header --- */
     body {
       background: #0f172a;
       color: #fff;
@@ -16,15 +17,6 @@
       margin: 0;
       padding: 0;
     }
-
-    /* Container (aligns header, main, footer) */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    /* Header */
     header {
       display: flex;
       justify-content: space-between;
@@ -43,8 +35,14 @@
       font-weight: bold;
       font-size: 18px;
     }
-    .brand img { width: 56px; height: 56px; }
-    nav { display: flex; gap: 10px; }
+    .brand img {
+      width: 56px;
+      height: 56px;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+    }
     nav a {
       color: #fff;
       text-decoration: none;
@@ -54,6 +52,8 @@
     nav a.active {
       color: #3b82f6;
     }
+
+    /* --- Mobile Menu Button --- */
     .menu-toggle {
       display: none;
       background: none;
@@ -67,7 +67,7 @@
       transform: translateY(-50%);
     }
 
-    /* Buttons */
+    /* --- Buttons --- */
     .btn {
       display: inline-block;
       padding: 10px 20px;
@@ -77,13 +77,20 @@
       border-radius: 6px;
       transition: 0.3s;
     }
-    .btn:hover { background: #06b6d4; }
+    .btn:hover {
+      background: #06b6d4;
+    }
 
-    /* Main */
-    main { padding: 20px; }
-    main h1 { font-size: 2rem; margin-bottom: 10px; }
+    /* --- Main --- */
+    main {
+      padding: 20px;
+    }
+    main h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
 
-    /* Pricing Cards */
+    /* --- Pricing Cards --- */
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -119,12 +126,16 @@
       color: #ddd;
     }
 
-    /* Responsive */
+    /* --- Responsive --- */
     @media (max-width: 992px) {
-      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
     @media (max-width: 768px) {
-      .pricing-grid { grid-template-columns: 1fr; }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
       nav {
         display: none;
         flex-direction: column;
@@ -145,11 +156,16 @@
         max-height: 500px;
         opacity: 1;
       }
-      nav a { padding: 14px; display: block; }
-      .menu-toggle { display: block; }
+      nav a {
+        padding: 14px;
+        display: block;
+      }
+      .menu-toggle {
+        display: block;
+      }
     }
 
-    /* Footer */
+    /* --- Footer --- */
     footer {
       text-align: center;
       padding: 20px;
@@ -173,7 +189,8 @@
       <a href="work.html">Work</a>
       <a href="pricing.html" class="active">Pricing</a> <!-- Active page -->
       <a href="contact.html">Contact</a>
-      <a class="btn small" href="services.html">All Services</a>
+      <!-- ✅ Fixed button: White text on blue bg -->
+      <a class="btn small" href="services.html" style="background:#3b82f6; color:#fff;">All Services</a>
     </nav>
   </header>
 
