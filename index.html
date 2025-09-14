@@ -476,10 +476,11 @@
         errorBox.textContent = "❌ Please enter a valid name (only letters, 2-50 characters).";
         return;
       }
-      if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
-        errorBox.textContent = "❌ Please enter a valid email address.";
-        return;
-      }
+     if (!/^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
+  errorBox.textContent = "❌ Please enter a valid email address.";
+  return;
+}
+
       if (!/^\d{10}$/.test(phone)) {
         errorBox.textContent = "❌ Please enter a valid 10-digit mobile number.";
         return;
