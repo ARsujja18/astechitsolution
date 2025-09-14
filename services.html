@@ -35,6 +35,17 @@
       font-weight: bold;
       font-size: 18px;
     }
+
+
+.btn.small.active {
+  background: #3b82f6 !important; /* Blue background */
+  color: #fff !important;        /* White text */
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-weight: 600;
+}
+
+    
     .brand img {
       width: 56px;
       height: 56px;
@@ -167,11 +178,12 @@
   <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
   <nav>
  <a href="index.html" >Home</a>
-    <a href="#services">Services</a>
-    <a href="#work">Work</a>
-     <a href="Pricing.html">Pricing</a>   <!-- ✅ New Tab for Pricing Page -->
-    <a href="#contact">Contact</a>
-   <a class="btn small" href="services.html" style="background:#ffffff; color: #3b82f6; !important;">All Services</a>
+    <a href="index.html">Home</a>
+      <a a href="index.html#services">Services</a>
+      <a href="index.html#work">Work</a>
+      <a href="pricing.html" >Pricing</a> <!-- Active page -->
+      <a href="index.html#contact">Contact</a>
+  <a class="btn small active" href="services.html">All Services</a>
 
   </nav>
 </header>
