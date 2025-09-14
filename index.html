@@ -20,16 +20,15 @@
       color: #fff;
     }
 
-/* --- Service Card Headings --- */
-.card h3 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin: 12px 0;
-  background: linear-gradient(90deg, #3b82f6, #06b6d4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+    /* --- Service Card Headings --- */
+    .card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 12px 0;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     .stats li {
       display: flex;
@@ -89,410 +88,147 @@
 
     /* --- Mobile Menu Button --- */
     .menu-toggle {
-       display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #fff;
-  font-size: 28px;
-  position: absolute;   /* FIX */
-  right: 20px;          /* push to right corner */
-  top: 50%;             /* center vertically */
-  transform: translateY(-50%);
-
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 28px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     /* --- Mobile Responsive --- */
-  @media (max-width: 768px) {
-  nav {
-    display: flex;              /* always flex (so toggle works) */
-    flex-direction: column;
-    background: #0f172a;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    padding: 1rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    border-radius: 0 0 12px 12px;
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        background: #0f172a;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        border-radius: 0 0 12px 12px;
 
-    max-height: 0;             /* hidden by default */
-    opacity: 0;
-    overflow: hidden;
-    pointer-events: none;       /* so links are not clickable */
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-  }
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+      }
 
-  nav.active {
-    max-height: 500px;          /* enough space for links */
-    opacity: 1;
-    pointer-events: auto;       /* enable clicking */
-  }
+      nav.active {
+        max-height: 500px;
+        opacity: 1;
+        pointer-events: auto;
+      }
 
-  nav a {
-    padding: 10px;
-    display: block;
-  }
+      nav a {
+        padding: 10px;
+        display: block;
+      }
 
-  nav .btn.small {
-    margin-top: 0px;
-    display: inline-block;
-  }
+      nav .btn.small {
+        margin-top: 0px;
+        display: inline-block;
+      }
 
-  .menu-toggle {
-    display: block;
-  }
-}
+      .menu-toggle {
+        display: block;
+      }
+    }
 
+    /* Error message styling */
+    .error-message {
+      color: red;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
   <!-- Header -->
- <header class="container header">
-  <a class="brand" href="index.html">
-    <img alt="ASTECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
-    <span>ASTECH IT SOLUTION</span>
-  </a>
-  <!-- Mobile menu button (top-right) -->
-  <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
-  <nav>
- <a href="index.html" style="color:#3b82f6 !important;">Home</a>
-    <a href="#services">Services</a>
-    <a href="#work">Work</a>
-     <a href="Pricing.html">Pricing</a>   <!-- ✅ New Tab for Pricing Page -->
-    <a href="#contact">Contact</a>
-    <a class="btn small" href="services.html">All Services</a>
-  </nav>
-</header>
-
+  <header class="container header">
+    <a class="brand" href="index.html">
+      <img alt="ASTECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
+      <span>ASTECH IT SOLUTION</span>
+    </a>
+    <!-- Mobile menu button (top-right) -->
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <nav>
+      <a href="index.html" style="color:#3b82f6 !important;">Home</a>
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="Pricing.html">Pricing</a>
+      <a href="#contact">Contact</a>
+      <a class="btn small" href="services.html">All Services</a>
+    </nav>
+  </header>
 
   <main>
     <!-- Hero -->
     <section class="hero container" style="border:2px solid #007bff; border-radius:12px; padding:2rem; margin-bottom:2rem;">
-      <h1>We build <span class="accent">softwares</span> & <span class="accent">websites </span>that help you grow.</h1>
+      <h1>We build <span class="accent">softwares</span> & <span class="accent">websites</span> that help you grow.</h1>
       <p>From idea to launch, ASTECH IT SOLUTION delivers clean design, reliable engineering, and ongoing support.</p>
       <div class="cta">
         <a class="btn" href="#contact">Request a free quote</a>
-        <a class="btn " href="services.html">See what we do</a>
-      </div>
-      <ul class="stats">
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M20 6L9 17l-5-5"/>
-          </svg>
-          <strong>99.9%</strong> uptime-ready hosting setups
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M20 6L9 17l-5-5"/>
-          </svg>
-          <strong>SEO-first</strong> websites
-        </li>
-        <li>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path d="M20 6L9 17l-5-5"/>
-          </svg>
-          <strong>Secure</strong> by default
-        </li>
-      </ul>
-    </section>
-
-    <!-- Core Services -->
-    <section id="services" class="container">
-      <h2>Core Services</h2>
-      <div class="grid three">
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-            </svg>
-          </div>
-          <h3>Website Development</h3>
-          <p>Fast, responsive, and accessible websites using modern HTML, CSS, and JavaScript. Includes analytics and SEO basics.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <path d="M7 12h10M12 7v10"/>
-            </svg>
-          </div>
-          <h3>Custom Software</h3>
-          <p>Business tools, dashboards, and automation built to your workflow. Scalable APIs and databases.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="9" cy="21" r="1"/>
-              <circle cx="20" cy="21" r="1"/>
-              <path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/>
-            </svg>
-          </div>
-          <h3>eCommerce</h3>
-          <p>Online stores with secure payments, inventory, and order management.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M12 20h9"/>
-              <path d="M12 4h9"/>
-              <rect x="3" y="4" width="6" height="16" rx="1"/>
-            </svg>
-          </div>
-          <h3>UI/UX Design</h3>
-          <p>Wireframes, prototypes, and brand-friendly design systems to improve conversion and usability.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <rect x="7" y="2" width="10" height="20" rx="2"/>
-              <path d="M11 18h2"/>
-            </svg>
-          </div>
-          <h3>Mobile-friendly</h3>
-          <p>Responsive layouts and progressive enhancement for great performance on every device.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M21 12a9 9 0 11-6.219-8.56"/>
-              <path d="M21 3v6h-6"/>
-            </svg>
-          </div>
-          <h3>Maintenance & Support</h3>
-          <p>Updates, backups, monitoring, and security hardening—so you can focus on your business.</p>
-        </div>
+        <a class="btn" href="services.html">See what we do</a>
       </div>
     </section>
-
-    <!-- Recent Work -->
- <!-- Recent Work (Auto-Sliding Carousel) -->
-<section id="work" class="container">
-  <h2>Recent Work</h2>
-  <div class="work-slider">
-    <div class="work-track">
-      <!-- First set of projects -->
-      <div class="work-card" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
-        <h3>Project Titan</h3>
-        <p>Marketing site + lead capture with blazing load times.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
-        <h3>Atlas CRM</h3>
-        <p>Custom mini-CRM that automated follow-ups and reports.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
-        <h3>Nova Shop</h3>
-        <p>Lightweight eCommerce with smooth checkout.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-        <h3>EduLearn</h3>
-        <p>E-learning platform with video lessons, quizzes, and student tracking.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
-        <h3>HealthTrack</h3>
-        <p>Healthcare appointment and patient records system with secure access.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
-        <h3>FinCore</h3>
-        <p>Finance dashboard for managing invoices, payments, and analytics.</p>
-      </div>
-
-      <!-- Duplicate set for infinite effect -->
-      <div class="work-card" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
-        <h3>Project Titan</h3>
-        <p>Marketing site + lead capture with blazing load times.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
-        <h3>Atlas CRM</h3>
-        <p>Custom mini-CRM that automated follow-ups and reports.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
-        <h3>Nova Shop</h3>
-        <p>Lightweight eCommerce with smooth checkout.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-        <h3>EduLearn</h3>
-        <p>E-learning platform with video lessons, quizzes, and student tracking.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
-        <h3>HealthTrack</h3>
-        <p>Healthcare appointment and patient records system with secure access.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
-        <h3>FinCore</h3>
-        <p>Finance dashboard for managing invoices, payments, and analytics.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-/* --- Recent Work Carousel --- */
-.work-slider {
-  overflow: hidden;
-  position: relative;
-  margin-top: 20px;
-}
-
-.work-track {
-  display: flex;
-  gap: 20px;
-  animation: scrollWork 40s linear infinite;
-  width: max-content;
-}
-
-.work-card {
-  min-width: 280px;
-  padding: 20px;
-  border-radius: 16px;
-  color: #fff;
-  flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-@keyframes scrollWork {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-</style>
-
-
-<style>
-/* --- Recent Work Carousel --- */
-.work-slider {
-  overflow: hidden;
-  position: relative;
-  margin-top: 20px;
-}
-
-.work-track {
-  display: flex;
-  gap: 20px;
-  animation: scrollWork 25s linear infinite;
-  width: max-content;
-}
-
-.work-card {
-  min-width: 280px;
-  padding: 20px;
-  border-radius: 16px;
-  color: #fff;
-  flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-@keyframes scrollWork {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); } /* adjust based on duplicate cards */
-}
-.contact {
-  border: 1px solid;
-  border-radius: 12px;
-  padding: 20px;
-}
-  
-</style>
 
     <!-- Contact -->
-<section id="contact" class="container contact">
-  <h2>Contact</h2>
-  <p>Tell us about your project. We’ll reply within 12 Hours.</p>
-  <form class="form" action="https://api.web3forms.com/submit" method="POST">
-  <!-- Replace with your actual Web3Forms Access Key -->
-  <input type="hidden" name="access_key" value="dc29630e-b890-4b86-8104-f56df7bcc2c9">
+    <section id="contact" class="container contact">
+      <h2>Contact</h2>
+      <p>Tell us about your project. We’ll reply within 12 Hours.</p>
+      <form class="form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="dc29630e-b890-4b86-8104-f56df7bcc2c9">
 
+        <!-- Name -->
+        <label>
+          <span>Name</span>
+          <input type="text" name="name" required placeholder="Your full name">
+        </label>
 
-  <!-- Name -->
-  <label>
-    <span>Name</span>
-    <input type="text" name="name" required minlength="2" maxlength="50" pattern="^[A-Za-z\s]+$" placeholder="Your full name ---only text allowed">
-  </label>
+        <!-- Email -->
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required placeholder="your.email@example.com">
+        </label>
 
-  <!-- Email -->
-  <label>
-    <span>Email</span>
-    <input type="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="your.email@example.com">
-  </label>
+        <!-- Mobile Number -->
+        <label>
+          <span>Mobile Number</span>
+          <input type="tel" name="phone" required placeholder="your 10-digit mobile number">
+        </label>
 
-  <!-- Mobile Number -->
-  <label>
-    <span>Mobile Number</span>
-    <input type="tel" name="phone" required pattern="^\d{10}$" placeholder="your 10-digit mobile number">
-  </label>
+        <!-- Project Brief -->
+        <label class="full">
+          <span>Project Brief</span>
+          <textarea name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Describe your project in detail"></textarea>
+        </label>
 
-  <!-- Project Brief -->
-  <label class="full">
-    <span>Project Brief</span>
-    <textarea name="message" rows="5" required minlength="10" maxlength="1000" placeholder="Describe your project in detail"></textarea>
-  </label>
+        <!-- Error Message -->
+        <div id="form-error" class="error-message"></div>
 
-  <!-- Submit Button -->
-  <button class="btn" type="submit">Send</button>
-</form>
+        <!-- Submit Button -->
+        <button class="btn" type="submit">Send</button>
+      </form>
 
+      <!-- Success + Error Messages -->
+      <div id="result"></div>
 
-<!-- Success + Error Messages -->
-<div id="result"></div>
-
-<script>
-  const form = document.querySelector(".form");
-  const result = document.getElementById("result");
-
-  form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    const formData = new FormData(form);
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData
-    });
-
-    if (response.ok) {
-      result.innerHTML = "<p style='color:green;'>✅ Your message has been sent successfully!</p>";
-      form.reset();
-
-      // Remove success message after 30 seconds (30000 ms)
-      setTimeout(() => {
-        result.innerHTML = "";
-      }, 30000);
-
-    } else {
-      result.innerHTML = "<p style='color:red;'>❌ Oops! Something went wrong. Please try again.</p>";
-
-      // Remove error message after 30 seconds
-      setTimeout(() => {
-        result.innerHTML = "";
-      }, 30000);
-    }
-  });
-</script>
-
-
-  <p class="note">Or email us directly: <a href="mailto:astech1811@gmail.com">astech1811@gmail.com</a></p>
-</section>
-
-    
+      <p class="note">Or email us directly: <a href="mailto:astech1811@gmail.com">astech1811@gmail.com</a></p>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="container footer">
     <p>© <span id="year"></span> ASTECH IT SOLUTION. All rights reserved.</p>
-   
   </footer>
 
   <script>
@@ -503,7 +239,59 @@
       nav.classList.toggle('active');
     });
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Form validation
+    const form = document.querySelector(".form");
+    const result = document.getElementById("result");
+    const errorBox = document.getElementById("form-error");
+
+    form.addEventListener("submit", async function(e) {
+      e.preventDefault();
+      errorBox.textContent = ""; // clear old errors
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const phone = form.phone.value.trim();
+
+      // Name validation
+      const nameRegex = /^[A-Za-z\s]{2,30}$/;
+      if (!nameRegex.test(name)) {
+        errorBox.textContent = "❌ Name must be 2-30 characters and only letters/spaces.";
+        return;
+      }
+
+      // Phone validation
+      const phoneRegex = /^\d{10}$/;
+      if (!phoneRegex.test(phone)) {
+        errorBox.textContent = "❌ Mobile number must be exactly 10 digits.";
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+      if (!emailRegex.test(email)) {
+        errorBox.textContent = "❌ Please enter a valid email address.";
+        return;
+      }
+
+      // If all validations pass, send form
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData
+      });
+
+      if (response.ok) {
+        result.innerHTML = "<p style='color:green;'>✅ Your message has been sent successfully!</p>";
+        form.reset();
+        setTimeout(() => { result.innerHTML = ""; }, 30000);
+      } else {
+        result.innerHTML = "<p style='color:red;'>❌ Oops! Something went wrong. Please try again.</p>";
+        setTimeout(() => { result.innerHTML = ""; }, 30000);
+      }
+    });
   </script>
+
   <script src="assets/js/main.js"></script>
 </body>
 </html>
