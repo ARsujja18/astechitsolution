@@ -1,512 +1,62 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ASTECH IT SOLUTION — Softwares & Websites Development</title>
-  <meta name="description" content="ASTECH IT SOLUTION builds modern websites and custom software. We design, develop, and maintain fast, secure, and scalable digital products.">
-  <meta property="og:title" content="ASTECH IT SOLUTION">
-  <meta property="og:description" content="Websites • Web Apps • Custom Software">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/mylogo.png">
-  <link rel="icon" href="assets/img/mylogo.png">
-  <link rel="stylesheet" href="assets/css/styles.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AS TECH IT SOLUTION | Software & Website Development</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #fff;
-    }
-
-    /* --- Service Card Headings --- */
-    .card h3 {
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 12px 0;
-      background: linear-gradient(90deg, #3b82f6, #06b6d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .stats li {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .stats svg {
-      flex-shrink: 0;
-      color: #007bff;
-    }
-
-    /* --- Header --- */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 20px;
-      background: #0f172a;
-      position: relative;
-      z-index: 1000;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .brand img {
-      width: 56px;
-      height: 56px;
-    }
-
-    nav {
-      display: flex;
-      gap: 10px;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #3b82f6;
-    }
-    nav .btn.small {
-      background: #fff;
-      padding: 8px 12px;
-      border-radius: 6px;   
-      color: #3b82f6;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    /* --- Mobile Menu Button --- */
-    .menu-toggle {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #fff;
-      font-size: 28px;
-      position: absolute;
-      right: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    /* --- Mobile Responsive --- */
-    @media (max-width: 768px) {
-      nav {
-        display: flex;
-        flex-direction: column;
-        background: #0f172a;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 100%;
-        padding: 1rem;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        border-radius: 0 0 12px 12px;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        pointer-events: none;
-        transition: max-height 0.4s ease, opacity 0.4s ease;
-      }
-
-      nav.active {
-        max-height: 500px;
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      nav a {
-       padding: 4px 10px;
-        display: block;
-      }
-
-      nav .btn.small {
-        margin-top: 0px;
-        display: inline-block;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    /* --- Contact Section --- */
-    .contact {
-      border: 1px solid;
-      border-radius: 12px;
-      padding: 20px;
-    }
-    .error-message {
-      color: red;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
+    body { margin:0; font-family: Arial, sans-serif; color:#333; }
+    header { background:#004aad; color:#fff; padding:20px 40px; display:flex; align-items:center; justify-content:space-between; }
+    header img { height:50px; }
+    nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:500; }
+    .hero { text-align:center; padding:80px 20px; background:#f5f9ff; }
+    .hero h1 { font-size:42px; margin-bottom:20px; }
+    .hero p { font-size:18px; color:#555; margin-bottom:30px; }
+    .hero a { background:#004aad; color:#fff; padding:12px 28px; border-radius:6px; text-decoration:none; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; padding:60px 40px; }
+    .service { background:#fff; border:1px solid #eee; border-radius:10px; padding:20px; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.05); }
+    .service img { width:100%; height:150px; object-fit:cover; border-radius:8px; }
+    footer { background:#222; color:#ccc; text-align:center; padding:25px; margin-top:40px; }
+    footer a { color:#fff; text-decoration:none; }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="container header">
-    <a class="brand" href="index.html">
-      <img alt="ASTECH IT SOLUTION logo" src="assets/img/mylogo.png" width="56" height="56">
-      <span>ASTECH IT SOLUTION</span>
-    </a>
-    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+  <header>
+    <img src="assets/img/logo.png" alt="AS TECH IT SOLUTION Logo">
     <nav>
-      <a href="index.html" style="color:#3b82f6 !important;">Home</a>
-      <a href="#services">Services</a>
-      <a href="#work">Work</a>
-      <a href="Pricing.html">Pricing</a>
-      <a href="#contact">Contact</a>
-      <a class="btn small" href="services.html">All Services</a>
+      <a href="#">Home</a>
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero container" style="border:2px solid #007bff; border-radius:12px; padding:2rem; margin-bottom:2rem;">
-      <h1>We build <span class="accent">softwares</span> & <span class="accent">websites </span>that help you grow.</h1>
-      <p>From idea to launch, ASTECH IT SOLUTION delivers clean design, reliable engineering, and ongoing support.</p>
-      <div class="cta">
-        <a class="btn" href="#contact">Request a free quote</a>
-        <a class="btn " href="services.html">See what we do</a>
-      </div>
-      <ul class="stats">
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><strong>99.9%</strong> uptime-ready hosting setups</li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><strong>SEO-first</strong> websites</li>
-        <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><strong>Secure</strong> by default</li>
-      </ul>
-    </section>
+  <section class="hero">
+    <h1>We Build Modern Software & Websites</h1>
+    <p>AS TECH IT SOLUTION delivers fast, secure, and scalable digital solutions for your business growth.</p>
+    <a href="contact.html">Get a Quote</a>
+  </section>
 
-    <!-- Core Services -->
-    <!-- (unchanged code for services + work carousel kept same for brevity) -->
-
-<!-- Core Services -->
-    <section id="services" class="container">
-      <h2>Core Services</h2>
-      <div class="grid three">
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
-            </svg>
-          </div>
-          <h3>Website Development</h3>
-          <p>Fast, responsive, and accessible websites using modern HTML, CSS, and JavaScript. Includes analytics and SEO basics.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <path d="M7 12h10M12 7v10"/>
-            </svg>
-          </div>
-          <h3>Custom Software</h3>
-          <p>Business tools, dashboards, and automation built to your workflow. Scalable APIs and databases.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <circle cx="9" cy="21" r="1"/>
-              <circle cx="20" cy="21" r="1"/>
-              <path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/>
-            </svg>
-          </div>
-          <h3>eCommerce</h3>
-          <p>Online stores with secure payments, inventory, and order management.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M12 20h9"/>
-              <path d="M12 4h9"/>
-              <rect x="3" y="4" width="6" height="16" rx="1"/>
-            </svg>
-          </div>
-          <h3>UI/UX Design</h3>
-          <p>Wireframes, prototypes, and brand-friendly design systems to improve conversion and usability.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <rect x="7" y="2" width="10" height="20" rx="2"/>
-              <path d="M11 18h2"/>
-            </svg>
-          </div>
-          <h3>Mobile-friendly</h3>
-          <p>Responsive layouts and progressive enhancement for great performance on every device.</p>
-        </div>
-
-        <div class="card">
-          <div class="icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M21 12a9 9 0 11-6.219-8.56"/>
-              <path d="M21 3v6h-6"/>
-            </svg>
-          </div>
-          <h3>Maintenance & Support</h3>
-          <p>Updates, backups, monitoring, and security hardening—so you can focus on your business.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Recent Work -->
- <!-- Recent Work (Auto-Sliding Carousel) -->
-<section id="work" class="container">
-  <h2>Recent Work</h2>
-  <div class="work-slider">
-    <div class="work-track">
-      <!-- First set of projects -->
-      <div class="work-card" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
-        <h3>Project Titan</h3>
-        <p>Marketing site + lead capture with blazing load times.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
-        <h3>Atlas CRM</h3>
-        <p>Custom mini-CRM that automated follow-ups and reports.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
-        <h3>Nova Shop</h3>
-        <p>Lightweight eCommerce with smooth checkout.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-        <h3>EduLearn</h3>
-        <p>E-learning platform with video lessons, quizzes, and student tracking.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
-        <h3>HealthTrack</h3>
-        <p>Healthcare appointment and patient records system with secure access.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
-        <h3>FinCore</h3>
-        <p>Finance dashboard for managing invoices, payments, and analytics.</p>
-      </div>
-
-      <!-- Duplicate set for infinite effect -->
-      <div class="work-card" style="background: linear-gradient(135deg, #3b82f6, #06b6d4);">
-        <h3>Project Titan</h3>
-        <p>Marketing site + lead capture with blazing load times.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #ec4899, #f43f5e);">
-        <h3>Atlas CRM</h3>
-        <p>Custom mini-CRM that automated follow-ups and reports.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #22c55e, #16a34a);">
-        <h3>Nova Shop</h3>
-        <p>Lightweight eCommerce with smooth checkout.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
-        <h3>EduLearn</h3>
-        <p>E-learning platform with video lessons, quizzes, and student tracking.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #8b5cf6, #6366f1);">
-        <h3>HealthTrack</h3>
-        <p>Healthcare appointment and patient records system with secure access.</p>
-      </div>
-      <div class="work-card" style="background: linear-gradient(135deg, #ef4444, #b91c1c);">
-        <h3>FinCore</h3>
-        <p>Finance dashboard for managing invoices, payments, and analytics.</p>
-      </div>
+  <section class="services">
+    <div class="service">
+      <img src="assets/img/ecommerce.jpg" alt="E-Commerce">
+      <h3>E-Commerce Websites</h3>
+      <p>Custom online stores with secure payments and stunning designs.</p>
     </div>
-  </div>
-</section>
+    <div class="service">
+      <img src="assets/img/software.jpg" alt="Software">
+      <h3>Custom Software</h3>
+      <p>Tailored software solutions to optimize your business workflow.</p>
+    </div>
+    <div class="service">
+      <img src="assets/img/webdev.jpg" alt="Web Development">
+      <h3>Web Development</h3>
+      <p>Modern websites that are responsive, fast, and SEO-ready.</p>
+    </div>
+  </section>
 
-<style>
-/* --- Recent Work Carousel --- */
-.work-slider {
-  overflow: hidden;
-  position: relative;
-  margin-top: 20px;
-}
-
-.work-track {
-  display: flex;
-  gap: 20px;
-  animation: scrollWork 40s linear infinite;
-  width: max-content;
-}
-
-.work-card {
-  min-width: 280px;
-  padding: 20px;
-  border-radius: 16px;
-  color: #fff;
-  flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-@keyframes scrollWork {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-</style>
-
-
-<style>
-/* --- Recent Work Carousel --- */
-.work-slider {
-  overflow: hidden;
-  position: relative;
-  margin-top: 20px;
-}
-
-.work-track {
-  display: flex;
-  gap: 20px;
-  animation: scrollWork 25s linear infinite;
-  width: max-content;
-}
-
-.work-card {
-  min-width: 280px;
-  padding: 20px;
-  border-radius: 16px;
-  color: #fff;
-  flex-shrink: 0;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.work-card:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
-}
-
-@keyframes scrollWork {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); } /* adjust based on duplicate cards */
-}
-.contact {
-  border: 1px solid;
-  border-radius: 12px;
-  padding: 20px;
-}
-  
-</style>
-
-
-
-
-
-
-    <!-- Contact -->
-    <section id="contact" class="container contact">
-      <h2>Contact</h2>
-      <p>Tell us about your project. We’ll reply within 12 Hours.</p>
-      
-      <!-- Error messages appear here -->
-      <div id="form-error" class="error-message"></div>
-
-      <form class="form" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="dc29630e-b890-4b86-8104-f56df7bcc2c9">
-
-        <label><span>Name</span>
-          <input type="text" name="name" required minlength="2" maxlength="50"  placeholder="Your full name ">
-        </label>
-
-        <label><span>Email</span>
-          <input type="email" name="email" required placeholder="your.email@example.com">
-        </label>
-
-        <label><span>Mobile Number</span>
-          <input type="tel" name="phone"  placeholder="your 10-digit mobile number">
-        </label>
-
-        <label class="full"><span>Project Brief</span>
-          <textarea name="message" rows="5"  placeholder="Describe your project in detail"></textarea>
-        </label>
-
-        <button class="btn" type="submit">Send</button>
-      </form>
-
-      <div id="result"></div>
-      <p class="note">Or email us directly: <a href="mailto:astech1811@gmail.com">astech1811@gmail.com</a></p>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="container footer">
-    <p>© <span id="year"></span> ASTECH IT SOLUTION. All rights reserved.</p>
+  <footer>
+    <p>© 2025 AS TECH IT SOLUTION | All Rights Reserved | <a href="privacy.html">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Form Validation + Submit
-    const form = document.querySelector(".form");
-    const result = document.getElementById("result");
-    const errorBox = document.getElementById("form-error");
-
-    form.addEventListener("submit", async function(e) {
-      e.preventDefault();
-      errorBox.innerHTML = "";
-      result.innerHTML = "";
-
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const phone = form.phone.value.trim();
-      const message = form.message.value.trim();
-
-      // Validation rules
-      if (!/^[A-Za-z\s]{2,50}$/.test(name)) {
-        errorBox.textContent = "❌ Please enter a valid name (only letters, 2-50 characters).";
-        return;
-      }
-     if (!/^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)) {
-  errorBox.textContent = "❌ Please enter a valid email address.";
-  return;
-}
-
-      if (!/^\d{10}$/.test(phone)) {
-        errorBox.textContent = "❌ Please enter a valid 10-digit mobile number.";
-        return;
-      }
-      if (message.length < 10) {
-        errorBox.textContent = "❌ Project brief must be at least 10 characters.";
-        return;
-      }
-
-      // Submit if valid
-      const formData = new FormData(form);
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: formData
-      });
-
-      if (response.ok) {
-        result.innerHTML = "<p style='color:green;'>✅ Your message has been sent successfully!</p>";
-        form.reset();
-        setTimeout(() => { result.innerHTML = ""; }, 30000);
-      } else {
-        result.innerHTML = "<p style='color:red;'>❌ Oops! Something went wrong. Please try again.</p>";
-        setTimeout(() => { result.innerHTML = ""; }, 30000);
-      }
-    });
-  </script>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
