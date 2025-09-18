@@ -1,65 +1,102 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AS TECH IT SOLUTION | Professional IT Services</title>
-  <style>
-    body { margin:0; font-family: 'Helvetica Neue', sans-serif; background:#111; color:#eee; }
-    header { background:#000; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
-    header img { height:50px; }
-    nav a { color:#eee; margin:0 15px; text-decoration:none; font-weight:500; }
-    nav a:hover { color:#ff2c55; }
-    .hero { background:url('assets/img/hero-bg.jpg') no-repeat center/cover; padding:120px 20px; text-align:center; color:#fff; }
-    .hero h1 { font-size:48px; margin-bottom:20px; text-shadow:0 2px 6px rgba(0,0,0,0.6); }
-    .hero p { font-size:20px; margin-bottom:30px; }
-    .hero a { background:#ff2c55; color:#fff; padding:14px 30px; border-radius:6px; text-decoration:none; font-weight:600; }
-    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; padding:60px 40px; }
-    .service { background:#1a1a1a; border-radius:10px; padding:20px; text-align:center; transition:all 0.3s; }
-    .service:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.4); }
-    .service img { width:100%; height:160px; object-fit:cover; border-radius:8px; margin-bottom:15px; }
-    .service h3 { color:#ff2c55; }
-    footer { background:#000; color:#777; text-align:center; padding:30px; margin-top:50px; }
-    footer a { color:#ff2c55; text-decoration:none; }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="assets/img/logo.png" alt="AS TECH IT SOLUTION Logo">
-    <nav>
-      <a href="#">Home</a>
-      <a href="services.html">Services</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>AS TECH IT SOLUTION | Software & Website Development</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="landing">
+    <div id="page-wrapper">
 
-  <section class="hero">
-    <h1>Professional IT Services for Modern Businesses</h1>
-    <p>AS TECH IT SOLUTION delivers excellence in software & web development.</p>
-    <a href="contact.html">Work With Us</a>
-  </section>
+      <!-- Header -->
+      <header id="header">
+        <h1 id="logo">
+          <a href="index.html">
+            <img src="assets/img/logo.png" alt="AS TECH IT SOLUTION" style="height:50px;">
+          </a>
+        </h1>
+        <nav id="nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html" class="button special">Get a Quote</a></li>
+          </ul>
+        </nav>
+      </header>
 
-  <section class="services">
-    <div class="service">
-      <img src="assets/img/ecommerce.jpg" alt="E-Commerce">
-      <h3>E-Commerce Websites</h3>
-      <p>High-performance online stores with secure transactions.</p>
-    </div>
-    <div class="service">
-      <img src="assets/img/software.jpg" alt="Software">
-      <h3>Custom Software</h3>
-      <p>Reliable and scalable applications designed for your needs.</p>
-    </div>
-    <div class="service">
-      <img src="assets/img/webdev.jpg" alt="Web Development">
-      <h3>Web Development</h3>
-      <p>Elegant websites that combine creativity and functionality.</p>
-    </div>
-  </section>
+      <!-- Hero Banner -->
+      <section id="banner">
+        <div class="content">
+          <header>
+            <h2>We Build Modern Software & Websites</h2>
+            <p>Fast, secure, and scalable digital solutions<br />
+            for your business growth.</p>
+          </header>
+          <span class="image"><img src="assets/img/hero.jpg" alt="" /></span>
+        </div>
+        <a href="#one" class="goto-next scrolly">Next</a>
+      </section>
 
-  <footer>
-    <p>© 2025 AS TECH IT SOLUTION | Excellence in IT Solutions | <a href="privacy.html">Privacy Policy</a></p>
-  </footer>
-</body>
+      <!-- Services Section -->
+      <section id="one" class="spotlight style1 bottom">
+        <span class="image fit main"><img src="assets/img/services-bg.jpg" alt="" /></span>
+        <div class="content">
+          <div class="container">
+            <div class="row">
+              <div class="4u 12u$(medium)">
+                <h3>E-Commerce Websites</h3>
+                <p>Custom online stores with secure payments and stunning designs.</p>
+              </div>
+              <div class="4u 12u$(medium)">
+                <h3>Custom Software</h3>
+                <p>Tailored software solutions to optimize your business workflow.</p>
+              </div>
+              <div class="4u$ 12u$(medium)">
+                <h3>Web Development</h3>
+                <p>Modern websites that are responsive, fast, and SEO-ready.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#two" class="goto-next scrolly">Next</a>
+      </section>
+
+      <!-- Call to Action -->
+      <section id="cta" class="wrapper style4">
+        <div class="inner">
+          <header>
+            <h2>Ready to start your project?</h2>
+            <p>Contact AS TECH IT SOLUTION today and bring your ideas to life.</p>
+          </header>
+          <ul class="actions vertical">
+            <li><a href="contact.html" class="button fit special">Get a Quote</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <ul class="icons">
+          <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+          <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        </ul>
+        <ul class="copyright">
+          <li>© 2025 AS TECH IT SOLUTION | All Rights Reserved</li>
+        </ul>
+      </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
